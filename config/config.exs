@@ -8,7 +8,8 @@
 use Mix.Config
 
 config :blog,
-  ecto_repos: [Blog.Repo]
+  ecto_repos: [Blog.Repo],
+  generators: [binary_id: true]
 
 # Configures the endpoint
 config :blog, BlogWeb.Endpoint,

@@ -69,7 +69,8 @@ config :phoenix, :plug_init_mode, :runtime
 # Configure your database
 config :blog, Blog.Repo,
   username: "postgres",
-  password: "postgres",
-  database: "blog_dev",
+  password: "mysecretpassword",
+  database: "postgres",
   hostname: "localhost",
+  port: 32666,
   pool_size: 10

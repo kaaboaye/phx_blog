@@ -1,0 +1,5 @@
+<h1>Edit Comment</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.post_comment_path(@conn, :update, @comment.post_id, @comment)) %>
+
+<span><%= link "Back", to: Routes.post_comment_path(@conn, :index, @comment.post_id) %></span>

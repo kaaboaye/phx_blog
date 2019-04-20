@@ -12,7 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :blog, Blog.Repo,
   username: "postgres",
-  password: "postgres",
-  database: "blog_test",
+  password: "mysecretpassword",
+  database: "tests",
   hostname: "localhost",
+  port: 32666,
   pool: Ecto.Adapters.SQL.Sandbox
