@@ -15,7 +15,9 @@ defmodule BlogWeb.CommentController do
   end
 
   def create(conn, %{"post_id" => post_id, "comment" => comment_params}) do
-    case Comments.create_comment(comment_params) do
+    attrs = Map.put(comment_params, "post_id", post_id)
+
+    case Comments.create_comment(attrs) do
       {:ok, comment} ->
         conn
         |> put_flash(:info, "Comment created successfully.")

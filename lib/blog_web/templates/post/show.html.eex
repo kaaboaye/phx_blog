@@ -14,5 +14,6 @@
 
 </ul>
 
+<span><%= link "Comments", to: Routes.post_comment_path(@conn, :index, @post) %></span>
 <span><%= link "Edit", to: Routes.post_path(@conn, :edit, @post) %></span>
 <span><%= link "Back", to: Routes.post_path(@conn, :index) %></span>
